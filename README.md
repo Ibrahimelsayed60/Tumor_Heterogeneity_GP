@@ -1,1 +1,17 @@
 # Tumor_Heterogeneity_GP
+
+The identification of tumor subpopulations that adversely affect patient outcomes is essential for a more targeted investigation into how tumors develop detrimental phenotypes, as well as for personalized therapy. Mass spectrometry imaging has demonstrated the ability to uncover molecular intratumor heterogeneity. The challenge has been to conduct an objective analysis of the resulting data to identify those tumor subpopulations that affect patient outcome. Here we introduce spatially mapped t-distributed stochastic neighbor embedding (t-SNE), a nonlinear visualization of the data that is able to better resolve the biomolecular intratumor heterogeneity. In an unbiased manner, t-SNE can uncover tumor subpopulations that are statistically linked to patient survival in gastric cancer and metastasis status in primary tumors of breast cancer.
+
+
+
+Mass spectrometry imaging (MSI) is a technology that simultaneously provides the spatial distribution of hundreds of biomolecules directly from tissue . The two most common techniques, matrix-assisted laser desorption and desorption electrospray ionization, lead to minimal loss of histological information. Accordingly, the same tissue section can be histologically assessed and registered to the MSI dataset. In this manner, the mass spectral signatures of specific cell types or histopathological entities (e.g., tumor cells) can be extracted from the often highly heterogeneous tissues encountered in patient tumors . This high cellular specificity is behind the increasing popularity of MSI in cancer research and its proven ability to identify diagnostic and prognostic biomarkers.
+
+
+
+## Results:
+
+t-SNE Visualizes Molecular Tumor Heterogeneity in a Single Map. The t-SNE map of the gastric cancer dataset (Fig. 1) represents the intertumor and intratumor heterogeneity within the tumorspecific MSI data of the entire 63-patient cohort. To illustrate this, Fig shows scatterplots of the first and third t-SNE dimensions; A and B highlight three patient samples whose MSI datasets exhibit high intratumor heterogeneity, with data points scattered throughout the t-SNE data space show three patient samples with lower intratumor heterogeneity, resulting in samples lying close to each other in the t-SNE map.
+
+<img src="Results_images\photo1.png" alt="photo1" style="zoom:100%;" />
+
+Spatially Mapped t-SNE Identifies Tumor Subpopulations Associated with Survival in Gastric Cancer. To assess whether the structure revealed by t-SNE could be linked to clinical outcome, and thereby identify phenotypic tumor subpopulations, we clustered the t-SNE dataspace. First, we tested the ACCENSE algorithm , which is a density-based analysis of the data points in the t-SNE space to automatically locate clusters. The large number of clusters found by ACCENSE (more than 20) , undermined the ability to identify phenotypic subpopulations with statistical significance, because the patients were divided between too many groups. This result reflects the fact that t-SNE preserves the local structure of the data, and no information is used to help it differentiate between local differences due to different clones, different patient samples, or any measurement bias.
